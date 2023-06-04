@@ -9,6 +9,7 @@ class TabManager {
         nav.appendChild(ul);
         this.container = nav;
         this.content = ul;
+        this.setTab(currentTab);
         this.updateTabs();
     }
     get() {

@@ -13,7 +13,9 @@
 
     <link rel="stylesheet" href="../common/styles/header/header.css">
     <link rel="stylesheet" href="../common/styles/menu/menu.css">
+    <link rel="stylesheet" href="../common/styles/tab/tab.css">
 
+    <link rel="stylesheet" href="./styles/metadata.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
@@ -34,12 +36,68 @@
                     <option value="epub" selected>EPUB</option>
                 </select>
             </div>
-            <div></div>
+        </div>
+        <div>
+            <div class="tabs-container no-padding"></div>
+            <section id="metadata">
+                <div class="cover">
+                    <h2>Capa do livro</h2>
+                    <img src="../assets/demos/books/a_divina_comedia.jpg" alt="A divina comédia capa">
+                    <div class="change-cover">
+                        <p>Mudar imagem da capa:</p>
+                        <input type="file" name="cover" class="cover-input">
+                        <input type="checkbox" name="cover_original" id="originalCover">
+                        <label for="originalCover">Usar a capa do arquivo origem</label>
+                    </div>
+                </div>
+                <div class="output">
+                    <div>
+                        <p>Formato de saída:</p>
+                        <select name="output_format">
+                            <option value="epub" selected>EPUB</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Título:</p>
+                        <input type="text" name="title" placeholder="Insira um título">
+                    </div>
+                    <div>
+                        <p>Autor(es):</p>
+                        <input type="text" name="authors" placeholder="Insira os nomes dos autores">
+                    </div>
+                    <div>
+                        <p>Autor Ordenado:</p>
+                        <input type="text" name="sorted_authors" placeholder="Insira os nomes dos autores">
+                    </div>
+                    <div>
+                        <p>Editora:</p>
+                        <input type="text" name="publisher" placeholder="Insira o nome da editora">
+                    </div>
+                    <div>
+                        <p>Etiquetas:</p>
+                        <input type="text" name="tags">
+                    </div>
+                    <div>
+                        <p>Série:</p>
+                        <input type="text" name="serie">
+                    </div>
+                    <textarea name="preview"></textarea>
+                </div>
+            </section>
+            <section id="appearance"></section>
+            <section id="proccess"></section>
+            <section id="configure"></section>
+            <section id="detection"></section>
+            <section id="index"></section>
+            <section id="search"></section>
+            <section id="output"></section>
+            <section id="debug"></section>
         </div>
     </div>
 
     <script src="../common/scripts/header/header.js"></script>
     <script src="../common/scripts/menu/menu.js"></script>
+    <script src="../common/scripts/tab/tabManager.js"></script>
 
     <script src="./scripts/script.js"></script>
 </body>

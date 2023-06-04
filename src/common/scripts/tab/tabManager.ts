@@ -16,6 +16,7 @@ class TabManager {
         this.container = nav;
         this.content = ul;
 
+        this.setTab(currentTab);
         this.updateTabs();
     }
 
