@@ -13,6 +13,11 @@
     gap: 30px;
 }
 
+#header .header-logo-container img{
+    filter: invert(1);
+    height: 75px;
+}
+
 #header .header-user {
     display: flex;
     align-items: center;

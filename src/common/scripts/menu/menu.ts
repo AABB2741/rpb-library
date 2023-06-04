@@ -15,17 +15,9 @@ class Menu {
         code: "news",
         icon: "newspaper"
     }, {
-        label: "Séries",
-        code: "series",
-        icon: "squares-four"
-    }, {
         label: "Converter livros",
         code: "convert",
         icon: "arrows-clockwise"
-    }, {
-        label: "Importar livros",
-        code: "import",
-        icon: "arrow-square-in"
     }];
 
     options: MenuTab[] = [{
@@ -36,6 +28,10 @@ class Menu {
         label: "Minha biblioteca",
         code: "library",
         icon: "books"
+    }, {
+        label: "Dowloads",
+        code: "schedule",
+        icon: "download"
     }, {
         label: "Configurações",
         code: "settings",

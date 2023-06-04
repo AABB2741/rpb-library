@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://unpkg.com/@phosphor-icons/web"></script>
+      <link rel="stylesheet" href="../common/styles/reset.css">
+      <link rel="stylesheet" href="../common/styles/root.css">
+      <link rel="stylesheet" href="../schedule/styles/style.css">
+      <title>Schedules</title>
+</head>
+
+<body>
+      <div class="header-container"></div>
+      <div class="menu-container"></div>
+      <div class="container">
+            <div class="container-descriptions">
+                  <h1 class="container-title">Dowload programados</h1>
+                  <div class="book-description">
+                        <h2 class="book-title">Livro: <span>The Economist</span></h2>
+                        <p class="book-description">Global news and current afflairs from a European perpective. Best
+                              dowloades on Friday
+                              mornings (GMT)</p>
+                        <img src="../assets/demos/man-person-hair-white-profile-male-451653-pxhere.com.jpg"
+                              alt="foto do livro">
+                  </div>
+            </div>
+            <div class="box-layout">
+                  <div class="top-box">
+                        <input type="checkbox" />
+                        <span>Schedyle for dowload</span>
+                  </div>
+                  <div class="middle-box">
+                        <div>
+                              <input type="radio" id="option1" name="options" value="option1">
+                              <label for="option1">Days of week</label>
+                        </div>
+
+                        <div>
+                              <input type="radio" id="option2" name="options" value="option2">
+                              <label for="option2">Days of month</label>
+                        </div>
+
+                        <div>
+                              <input type="radio" id="option3" name="options" value="option3">
+                              <label for="option2">Every x days</label>
+                        </div>
+                  </div>
+                  <div class="bottom-box">
+                        <form>
+                              <div>
+                                    <div>
+                                          <input type="checkbox" id="segunda" name="dias" value="segunda">
+                                          <label for="segunda">Segunda-feira</label>
+                                    </div>
+
+                                    <div>
+                                          <input type="checkbox" id="terca" name="dias" value="terca">
+                                          <label for="terca">Terça-feira</label>
+                                    </div>
+
+                                    <div>
+                                          <input type="checkbox" id="quarta" name="dias" value="quarta">
+                                          <label for="quarta">Quarta-feira</label>
+                                    </div>
+
+                                    <div>
+                                          <input type="checkbox" id="quinta" name="dias" value="quinta">
+                                          <label for="quinta">Quinta-feira</label>
+                                    </div>
+                              </div>
+                              <div>
+                                    <div>
+                                          <input type="checkbox" id="sexta" name="dias" value="sexta">
+                                          <label for="sexta">Sexta-feira</label>
+                                    </div>
+
+                                    <div>
+                                          <input type="checkbox" id="sabado" name="dias" value="sabado">
+                                          <label for="sabado">Sábado</label>
+                                    </div>
+
+                                    <div>
+                                          <input type="checkbox" id="domingo" name="dias" value="domingo">
+                                          <label for="domingo">Domingo</label>
+                                    </div>
+                              </div>
+                        </form>
+
+                        <div>
+                              <span>Dowload After</span>
+                              <input type="date" id="date-input" name="date">
+                        </div>
+
+                  </div>
+                  <button>
+                        Dowload Agora
+                  </button>
+            </div>
+      </div>
+
+      <script src="../common/scripts/header/header.js"></script>
+      <script src="../common/scripts/menu/menu.js"></script>
+      <script src="./scripts/script.js"></script>
+</body>
+
+</html>

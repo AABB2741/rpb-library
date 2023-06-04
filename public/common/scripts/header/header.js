@@ -14,7 +14,7 @@ class Header {
         const logoContainer = document.createElement("div");
         logoContainer.classList.add("header-logo-container");
         const img = document.createElement("img");
-        img.src = "#";
+        img.src = "../assets/logo.png";
         img.alt = "RPB Library";
         logoContainer.appendChild(img);
         header.appendChild(logoContainer);
