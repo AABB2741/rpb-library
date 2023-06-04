@@ -1,0 +1,60 @@
+.menu-container.no-header #menu {
+    top: 0 !important;
+}
+
+#menu {
+    width: 50px;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    bottom: 0;
+    background: var(--header);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu a {
+    color: var(--font);
+    text-decoration: none;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu a.selected {
+    position: relative;
+    color: var(--font);
+}
+
+#menu a.selected::before {
+    content: "";
+    width: 3px;
+    background: var(--accent);
+    position: absolute;
+    top: 12.5%;
+    left: 0;
+    bottom: 12.5%;
+    width: 3px;
+    transform: translateX(-5px);
+    border-radius: 3px;
+}
+
+#menu .menu-tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#menu .menu-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 15px;
+}

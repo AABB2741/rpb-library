@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <?php
+        $mode = $_GET["mode"] ?? "";
+        $search = $_GET["q"];
+
+        if (!$search)
+            return Header("Location: /discover");
+    ?>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"<?= $search ?>" - RPB Library</title>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="../common/styles/reset.css">
+    <link rel="stylesheet" href="../common/styles/root.css">
+
+    <link rel="stylesheet" href="../common/styles/header/header.css">
+    <link rel="stylesheet" href="../common/styles/menu/menu.css">
+    <link rel="stylesheet" href="../common/styles/category/category.css">
+    <link rel="stylesheet" href="../common/styles/modal/modal.css">
+    <link rel="stylesheet" href="../common/styles/modal/book.css">
+    <link rel="stylesheet" href="../common/styles/modal/animation.css">
+    <link rel="stylesheet" href="../common/styles/category/author.css">
+    <link rel="stylesheet" href="../common/styles/category/book.css">
+    <link rel="stylesheet" href="../common/styles/category/notice.css">
+
+    <link rel="stylesheet" href="./styles/banner.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="header-container"></div>
+    <div class="menu-container"></div>
+    
+    <div class="container">
+        <div class="banner">
+            <h1 class="search"></h1>
+            <p>375 resultados para a busca</p>
+        </div>
+
+        <div class="search-categories"></div>
+    </div>
+
+    <script src="../common/scripts/header/header.js"></script>
+    <script src="../common/scripts/menu/menu.js"></script>
+    <script src="../common/scripts/modal/modal.js"></script>
+    <script src="../common/scripts/modal/bookModal.js"></script>
+    <script src="../common/scripts/category/category.js"></script>
+    <script src="../common/scripts/category/book.js"></script>
+    <script src="../common/scripts/category/author.js"></script>
+    <script src="../common/scripts/category/notice.js"></script>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

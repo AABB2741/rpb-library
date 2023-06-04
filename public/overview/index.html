@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título do livro - RPB Library</title>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="../common/styles/reset.css">
+    <link rel="stylesheet" href="../common/styles/root.css">
+
+    <link rel="stylesheet" href="../common/styles/menu/menu.css">
+    <link rel="stylesheet" href="../common/styles/header/header.css">
+    <link rel="stylesheet" href="../common/styles/tab/tab.css">
+
+    <link rel="stylesheet" href="./styles/related.css">
+    <link rel="stylesheet" href="./styles/book-infos.css">
+    <link rel="stylesheet" href="./styles/book-ratings.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-container"></div>
+        <div class="menu-container"></div>
+        <div class="content">
+            <section class="page-content">
+                <div class="downloaded">
+                    <i class="ph-fill ph-check-circle"></i>
+                    <p>Você já baixou este livro</p>
+                </div>
+                <h1 class="book-name">Moby Dick</h1>
+                <a href="#" class="book-author">Herman Melville</a>
+                <div class="book-overview">
+                    <button>
+                        <i class="ph ph-star"></i>
+                        <span>4.8 (208)</span>
+                    </button>
+                    <button>
+                        <i class="ph ph-chat-text"></i>
+                        <span>31</span>
+                    </button>
+                </div>
+                <div class="book-preview">
+                    <img src="../assets/demos/books/moby_dick.jpg" alt="" class="book-preview-img">
+                    <div class="book-preview-controls">
+                        <div class="book-preview-arrows">
+                            <button id="buttonPrevious">
+                                <i class="ph ph-caret-left"></i>
+                            </button>
+                            <button id="buttonNext">
+                                <i class="ph ph-caret-right"></i>
+                            </button>
+                        </div>
+                        <div class="book-preview-pages" id="pages">
+                            <button class="page"></button>
+                            <button class="page active"></button>
+                            <button class="page"></button>
+                            <button class="page"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-toolbar">
+                    <div class="book-infos">
+                        <p>Publicado por</p>
+                        <div class="book-publisher">
+                            <img src="../../assets/demos/avatar.jpg" alt="Foto" class="book-publisher-avatar">
+                            <div class="book-publisher-infos">
+                                <p class="book-publisher-name">Mario</p>
+                                <p class="book-publisher-books">12 livros</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-options">
+                        <a href="#" class="book-wishlist">
+                            <i class="ph ph-heart"></i>
+                            <p>Lista de desejos</p>
+                        </a>
+                        <a href="#" class="book-download">
+                            <i class="ph ph-books"></i>
+                            <p>Ver na biblioteca</p>
+                            <!-- <i class="ph ph-download-simple"></i>
+                            <p>Baixar</p> -->
+                        </a>
+                    </div>
+                </div>
+                <div class="book-tags">
+                    <a href="../search/index.html?mode=tag&q=Aventura" class="tag">Aventura</a>
+                    <a href="../search/index.html?mode=tag&q=Marítima" class="tag">Marítima</a>
+                    <a href="../search/index.html?mode=tag&q=Romance" class="tag">Romance</a>
+                    <a href="../search/index.html?mode=tag&q=Clássico" class="tag">Clássico</a>
+                    <a href="../search/index.html?mode=tag&q=Obsessão" class="tag">Obsessão</a>
+                    <a href="../search/index.html?mode=tag&q=Vingança" class="tag">Vingança</a>
+                    <a href="../search/index.html?mode=tag&q=Caça" class="tag">Caça</a>
+                    <a href="../search/index.html?mode=tag&q=Baleias" class="tag">Baleias</a>
+                    <a href="../search/index.html?mode=tag&q=Natureza" class="tag">Natureza</a>
+                    <a href="../search/index.html?mode=tag&q=Humana" class="tag">Humana</a>
+                    <a href="../search/index.html?mode=tag&q=Mitologia" class="tag">Mitologia</a>
+                    <a href="../search/index.html?mode=tag&q=Simbolismo" class="tag">Simbolismo</a>
+                    <a href="../search/index.html?mode=tag&q=Tragédia" class="tag">Tragédia</a>
+                    <a href="../search/index.html?mode=tag&q=Filosofia" class="tag">Filosofia</a>
+                    <a href="../search/index.html?mode=tag&q=Conflito" class="tag">Conflito</a>
+                    <a href="../search/index.html?mode=tag&q=Homem" class="tag">Homem</a>
+                    <a href="../search/index.html?mode=tag&q=Versus" class="tag">Versus</a>
+                    <a href="../search/index.html?mode=tag&q=Solidão" class="tag">Solidão</a>
+                    <a href="../search/index.html?mode=tag&q=Tripulação" class="tag">Tripulação</a>
+                    <a href="../search/index.html?mode=tag&q=Capitão" class="tag">Capitão</a>
+                    <a href="../search/index.html?mode=tag&q=Ahab" class="tag">Ahab</a>
+                    <a href="../search/index.html?mode=tag&q=Gigantesca" class="tag">Gigantesca</a>
+                    <a href="../search/index.html?mode=tag&q=Baleia" class="tag">Baleia</a>
+                    <a href="../search/index.html?mode=tag&q=Branca" class="tag">Branca</a>
+                    <a href="../search/index.html?mode=tag&q=Narrativa" class="tag">Narrativa</a>
+                    <a href="../search/index.html?mode=tag&q=Épica" class="tag">Épica</a>
+                    <a href="../search/index.html?mode=tag&q=Estilo" class="tag">Estilo</a>
+                    <a href="../search/index.html?mode=tag&q=Literário" class="tag">Literário</a>
+                    <a href="../search/index.html?mode=tag&q=Marcante" class="tag">Marcante</a>
+                    <a href="../search/index.html?mode=tag&q=Natureza" class="tag">Natureza</a>
+                    <a href="../search/index.html?mode=tag&q=Selvagem" class="tag">Selvagem</a>
+                    <a href="../search/index.html?mode=tag&q=Jornada" class="tag">Jornada</a>
+                </div>
+                
+                <div class="tabs-container no-padding"></div>
+
+                <div class="tab-content">
+                    <article id="summary">
+                        <p>"Moby Dick" é um romance escrito por Herman Melville e publicado em 1851. A história é
+                            narrada por Ishmael, um jovem marinheiro que decide embarcar no navio baleeiro Pequod,
+                            comandado pelo enigmático capitão Ahab.</p>
+                        <p>A bordo do Pequod, Ishmael conhece uma tripulação diversificada, composta por marinheiros de
+                            diferentes nacionalidades e experiências. No entanto, a atmosfera a bordo é tensa, pois o
+                            capitão Ahab revela sua obsessão: encontrar e caçar a gigantesca baleia branca chamada Moby
+                            Dick, que lhe arrancou uma perna em um encontro anterior.</p>
+                        <p>A medida que a viagem avança, Ahab se mostra cada vez mais obcecado com a busca pela baleia,
+                            ignorando os perigos e as advertências dos outros. Através das aventuras no mar e dos
+                            encontros com outras embarcações baleeiras, o leitor é imerso na vida a bordo e nas
+                            complexidades das relações entre os tripulantes.</p>
+                        <p>O livro também explora temas profundos e universais, como a natureza humana, o destino, a
+                            vingança, a obsessão e a luta do homem contra as forças da natureza. Além disso, "Moby Dick"
+                            apresenta uma rica simbologia, com a baleia branca representando um poder mítico e o próprio
+                            Ahab personificando a tragédia da busca desmedida pelo poder.</p>
+                        <p>A narrativa culmina em um confronto épico entre o Pequod e Moby Dick, com consequências
+                            trágicas para todos a bordo. "Moby Dick" é um livro notável pela sua riqueza de detalhes,
+                            estilo literário marcante e reflexões profundas sobre a condição humana e a natureza do mal.
+                            É considerado um clássico da literatura mundial e uma das grandes obras-primas da literatura
+                            americana.</p>
+                    </article>
+                    <div id="ratings">
+                        <div class="rate">
+                            <h2>Como você avalia "Moby Dick"?</h2>
+                            <div class="rate-submit">
+                                <div class="rate-choose">
+                                    <div class="rate-stars">
+                                        <i class="ph ph-star"></i>
+                                        <i class="ph ph-star"></i>
+                                        <i class="ph ph-star"></i>
+                                        <i class="ph ph-star"></i>
+                                        <i class="ph ph-star"></i>
+                                    </div>
+                                    <p class="rate-label">Legal</p>
+                                </div>
+                                <div class="rate-write">
+                                    <img src="../../assets/demos/avatar.jpg" alt="Foto do usuário"
+                                        class="book-rate-avatar">
+                                    <div class="rate-inputs">
+                                        <textarea name="rate-comment" class="rate-comment"
+                                            placeholder="Adicione um comentário (opcional)" cols="30"
+                                            rows="10"></textarea>
+                                        <button class="rate-confirm">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <h2>Avaliações</h2>
+                            <div id="comments">
+                                <div class="comment">
+                                    <div class="comment-avatar">
+                                        <img src="../../assets/demos/avatar.jpg" alt="">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-rate">
+                                            <i class="ph-fill ph-star"></i>
+                                            <i class="ph-fill ph-star"></i>
+                                            <i class="ph-fill ph-star"></i>
+                                            <i class="ph ph-star"></i>
+                                            <i class="ph ph-star"></i>
+                                        </div>
+                                        <div class="comment-infos">
+                                            <span class="comment-author">Joãozinho</span>
+                                            <span>∙</span>
+                                            <span class="comment-date">há 3 dias</span>
+                                        </div>
+                                        <article class="comment-text">
+                                            <p>Boa noite, brasileiros!</p>
+                                            <p>Achei esse livro muito loko mermão. Leiam.</p>
+                                        </article>
+                                        <div class="comment-options">
+                                            <button title="Útil">
+                                                <i class="ph ph-arrow-fat-up"></i>
+                                                <span>3.5k</span>
+                                            </button>
+                                            <button title="Não útil">
+                                                <i class="ph ph-arrow-fat-down"></i>
+                                                <span>246</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="news"></div>
+                    <div id="details"></div>
+                </div>
+            </section>
+            <aside class="related">
+                <h2>Livros relacionados</h2>
+                <div class="related-list" id="relatedList">
+                    <a class="book-related">
+                        <img src="../assets/demos/books/moby_dick.jpg" alt="">
+                        <div class="related-content">
+                            <div class="related-infos">
+                                <p class="related-title">Moby Dick parte 2</p>
+                                <p class="related-author">Herman Melville</p>
+                            </div>
+                            <div class="related-rates">
+                                <div class="related-rate">
+                                    <i class="ph ph-star"></i>
+                                    4.5 (137)
+                                </div>
+                                <div class="related-rate">
+                                    <i class="ph ph-chat-text"></i>
+                                    14
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="book-related">
+                        <img src="../assets/demos/books/moby_dick.jpg" alt="">
+                        <div class="related-content">
+                            <div class="related-infos">
+                                <p class="related-title">Um livro de teste com um título muito grande apenas para testar
+                                    a responsividade.</p>
+                                <p class="related-author">Herman Melville</p>
+                            </div>
+                            <div class="related-rates">
+                                <div class="related-rate">
+                                    <i class="ph ph-star"></i>
+                                    4.5 (137)
+                                </div>
+                                <div class="related-rate">
+                                    <i class="ph ph-chat-text"></i>
+                                    14
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="book-related">
+                        <img src="../assets/demos/books/moby_dick.jpg" alt="">
+                        <div class="related-content">
+                            <div class="related-infos">
+                                <p class="related-title">
+                                    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
+                                </p>
+                                <p class="related-author">Herman Melville</p>
+                            </div>
+                            <div class="related-rates">
+                                <div class="related-rate">
+                                    <i class="ph ph-star"></i>
+                                    4.5 (137)
+                                </div>
+                                <div class="related-rate">
+                                    <i class="ph ph-chat-text"></i>
+                                    14
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="../common/scripts/header/header.js"></script>
+    <script src="../common/scripts/menu/menu.js"></script>
+    <script src="../common/scripts/tab/tabManager.js"></script>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/comments.js"></script>
+</body>
+
+</html>

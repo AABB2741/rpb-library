@@ -1,0 +1,48 @@
+.book-modal {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.book-modal-cover img {
+    width: 250px;
+    height: 390px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px;
+}
+
+.book-modal-content {
+    flex: 1;
+    margin-left: 30px;
+}
+
+.book-modal-header {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.book-modal-close {
+    cursor: pointer;
+}
+
+.book-modal-details table {
+    margin-top: 15px;
+}
+
+.book-modal-details table tr:nth-child(even) {
+    background: var(--bg2);
+}
+
+.book-modal-details table td {
+    padding: 5px 15px;
+}
+
+.book-modal-details table td:nth-child(1) {
+    font-weight: 600;
+}

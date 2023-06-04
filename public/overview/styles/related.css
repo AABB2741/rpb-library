@@ -1,0 +1,45 @@
+.book-related {
+    margin-top: 15px;
+    cursor: pointer;
+    display: block;
+    color: var(--font);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.book-related img {
+    width: 75px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.book-related .related-content {
+    flex: 1;
+}
+
+.book-related .related-title {
+    font-weight: 600;
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+}
+
+.book-related .related-author {
+    color: var(--desc);
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.book-related .related-rates {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}

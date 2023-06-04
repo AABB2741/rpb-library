@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha biblioteca - RPB Library</title>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="../common/styles/reset.css">
+    <link rel="stylesheet" href="../common/styles/root.css">
+
+    <link rel="stylesheet" href="../common/styles/header/header.css">
+    <link rel="stylesheet" href="../common/styles/menu/menu.css">
+    <link rel="stylesheet" href="../common/styles/filter/filter.css">
+    <link rel="stylesheet" href="../common/styles/tab/tab.css">
+
+    <link rel="stylesheet" href="./styles/banner.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-container"></div>
+        
+        <div class="menu-container"></div>
+
+        <div class="content no-padding">
+            <a href="#" class="add-books">
+                <i class="ph ph-plus"></i>
+            </a>
+            <section class="library-banner">
+                <img src="../assets/imgs/library-banner.jpg" alt="Banner de biblioteca" class="library-banner-img">
+                <div class="library-banner-content">
+                    <div class="library-banner-infos">
+                        <h1 class="library-banner-title">Minha biblioteca</h1>
+                        <div class="library-banner-author">
+                            <img src="../assets/demos/avatar.jpg" alt="" class="library-banner-author-avatar">
+                            <p class="library-banner-author-name">por Mario</p>
+                        </div>
+                    </div>
+                    <div class="library-banner-options">
+
+                    </div>
+                </div>
+            </section>
+
+            <div class="filter-container"></div>
+
+            <div class="tabs-container"></div>
+            <!-- <nav class="library-tabs tabs">
+                <ul>
+                    <li>
+                        <button class="selected">Meus livros</button>
+                    </li>
+                    <li>
+                        <button>Minhas coleções</button>
+                    </li>
+                    <li>
+                        <button>Lista de desejos</button>
+                    </li>
+                </ul>
+            </nav> -->
+            <div class="page-content">
+                <div class="tab-content">
+                    <div id="downloadedBooks">
+                        <h1>Livros baixados</h1>
+                    </div>
+                    <div id="myBooks">
+                        <h1>Meus livros</h1>
+                    </div>
+                    <div id="collections">
+                        <h1>Coleções de livros</h1>
+                    </div>
+                    <div id="wishlist">
+                        <h1>Lista de desejos</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/scripts/header/header.js"></script>
+    <script src="../common/scripts/menu/menu.js"></script>
+    <script src="../common/scripts/filter/filter.js"></script>
+    <script src="../common/scripts/tab/tab.js"></script>
+    <script src="../common/scripts/tab/tabManager.js"></script>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>

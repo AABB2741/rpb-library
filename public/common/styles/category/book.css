@@ -1,0 +1,92 @@
+.book-container {
+    text-decoration: none;
+    border-radius: 15px;
+    overflow: hidden;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    position: relative;
+    width: 200px;
+    height: 350px;
+}
+
+.book-container .book-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.book-container .book-details {
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    padding: 5px;
+    color: var(--font2);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    margin-left: auto;
+    margin-top: 15px;
+    margin-right: 15px;
+    aspect-ratio: 1 / 1;
+    display: block;
+    cursor: pointer;
+}
+
+.book-container .book-details button i {
+    transform: translateY(-1px);
+}
+
+.book-container .book-infos {
+    color: var(--font2);
+    padding: 15px;
+    background: linear-gradient(0deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.book-container .book-title {
+    font-weight: 600;
+    font-size: 20px;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.book-container .book-author {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book-container .book-options {
+    margin-top: 5px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.book-container .book-options > * {
+    text-decoration: none;
+    background: var(--accent);
+    color: var(--font2);
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border: none;
+    padding: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.book-container .book-options > *:nth-child(1) {
+    flex: 1;
+}

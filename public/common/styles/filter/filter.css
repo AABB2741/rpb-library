@@ -1,0 +1,48 @@
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.filter .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter .filter-search {
+    background: none;
+}
+
+.filter .order {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.filter .order select {
+    background: var(--bg);
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    text-align: right;
+    font-size: 14px;
+}
+
+.filter .order button {
+    background: none;
+    position: relative;
+    padding-left: 15px;
+}
+
+.filter .order button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 75%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--border);
+}
