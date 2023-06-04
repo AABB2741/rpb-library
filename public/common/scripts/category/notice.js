@@ -9,7 +9,7 @@ class Notice {
     get() {
         const a = document.createElement("a");
         a.title = this.title;
-        a.href = "../overview/index.html?id=28"; // remover posição relativa
+        a.href = "../schedule/index.html?id=28"; // remover posição relativa
         a.classList.add("notice-container");
         const thumbnail = document.createElement("img");
         thumbnail.src = this.thumbnail;
