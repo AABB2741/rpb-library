@@ -148,6 +148,7 @@
 .commentArea textarea {
     flex: 1;
     background: var(--bg2);
+    color: var(--font);
     width: 100%;
     resize: vertical;
     border: 0;
