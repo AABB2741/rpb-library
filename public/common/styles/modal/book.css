@@ -4,12 +4,23 @@
     justify-content: space-between;
 }
 
+.book-modal-cover {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 .book-modal-cover img {
     width: 250px;
     height: 390px;
     object-fit: cover;
     object-position: center;
     border-radius: 16px;
+}
+
+.book-modal-cover a {
+    margin-top: 15px;
 }
 
 .book-modal-content {

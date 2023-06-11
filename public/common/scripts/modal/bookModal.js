@@ -17,6 +17,10 @@ class BookModal {
         const img = document.createElement("img");
         img.src = this.cover;
         bookModalCover.appendChild(img);
+        const editMetadataButton = document.createElement("a");
+        editMetadataButton.innerText = "Editar metadados",
+            editMetadataButton.href = "../metadata/edit/index.html";
+        bookModalCover.appendChild(editMetadataButton);
         bookModal.appendChild(bookModalCover);
         const bookModalContent = document.createElement("div");
         bookModalContent.classList.add("book-modal-content");
