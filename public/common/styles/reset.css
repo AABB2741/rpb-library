@@ -18,7 +18,7 @@ body:not(.no-header) {
 }
 
 body {
-    background: var(--bg);
+    background: var(--bg, #1a1a1a);
 }
 
 h1 {

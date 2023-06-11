@@ -10,8 +10,36 @@ function setResultsMode() {
     const banner = document.querySelector(".banner");
     const title = document.querySelector(".search");
     title.innerText = q;
-    if (searchMode == "tag") {
-        banner === null || banner === void 0 ? void 0 : banner.classList.add("tag");
+    if (searchMode == "tag" && banner) {
+        const bannerColors = [
+            '#800000',
+            '#B24C00',
+            '#CCCC00',
+            '#006400',
+            '#000080',
+            '#1E0064',
+            '#4B0082',
+            '#800080',
+            '#8B0A50',
+            '#CD6600',
+            '#006400',
+            '#008080',
+            '#003535',
+            '#000040',
+            '#400040',
+            '#800080',
+            '#C0B283',
+            '#79C477',
+            '#8AA1B5',
+            '#B8B8D9',
+            '#B8860B',
+            '#5F9EA0',
+            '#104646',
+            '#9932CC',
+            '#8C9EB8' // Azul-aço escuro
+        ];
+        banner.style.background = bannerColors[Math.round(Math.random() * (bannerColors.length - 1))];
+        banner.classList.add("tag");
     }
     else
         banner === null || banner === void 0 ? void 0 : banner.classList.add("search");

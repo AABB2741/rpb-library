@@ -58,6 +58,14 @@ class Header {
         headerUsername.innerText = "Mario";
         headerUser.appendChild(headerUsername);
         header.appendChild(headerUser);
+        const theme = document.createElement("button");
+        theme.classList.add("header-theme-selector");
+        theme.innerText = themeManager.theme == "dark" ? "Modo claro" : "Modo escuro";
+        headerUser.appendChild(theme);
+        theme.addEventListener("click", _ => {
+            themeManager.setTheme(themeManager.theme == "dark" ? "light" : "dark");
+            theme.innerText = themeManager.theme == "dark" ? "Modo claro" : "Modo escuro";
+        });
         return header;
     }
     search(q) {

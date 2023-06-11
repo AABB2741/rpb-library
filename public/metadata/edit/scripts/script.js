@@ -18,3 +18,5 @@ const metadataEditPages = new TabManager("basic", [{
         content: document.getElementById("custom-metadata")
     }], { baseUrl: "../../" });
 (_c = document.querySelector(".tab-container")) === null || _c === void 0 ? void 0 : _c.appendChild(metadataEditPages.get());
+themeManager.options = Object.assign(Object.assign({}, themeManager.options), { baseUrl: "../../" });
+themeManager.setTheme(themeManager.theme); // Atualizando para trocar opções

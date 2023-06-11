@@ -1,0 +1,16 @@
+:root {
+    --bg: #1a1a1a;
+    --bg2: #121212;
+    --bg3: #272727;
+    --header: #131313;
+    --border: #949494;
+    --font: #fff;
+    --font2: #fff;
+    --desc: #cccccc;
+    --disabled: #585858;
+    --accent: #0081ff;
+    --accent2: #00b652;
+    --check: #00e266;
+
+    --logo-invert: 1;
+}

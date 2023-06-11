@@ -14,7 +14,7 @@
 }
 
 #header .header-logo-container img{
-    filter: invert(1);
+    filter: invert(var(--logo-invert));
     height: 75px;
 }
 
@@ -36,6 +36,11 @@
 
 #header .header-user-name {
     font-weight: 900;
+}
+
+#header .header-theme-selector {
+    margin-right: 15px;
+    cursor: pointer;   
 }
 
 #header .header-search {

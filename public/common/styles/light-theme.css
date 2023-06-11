@@ -1,0 +1,17 @@
+/* Light */
+:root {
+    --bg: #eeeeee;
+    --bg2: #fff;
+    --bg3: #ebebeb;
+    --header: #ffffff;
+    --border: #939393;
+    --font: #000;
+    --font2: #fff;
+    --desc: #363636;
+    --disabled: #9e9e9e;
+    --accent: #0081ff;
+    --accent2: #00b652;
+    --check: #00b652;
+
+    --logo-invert: 0;
+}

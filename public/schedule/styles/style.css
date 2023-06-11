@@ -147,7 +147,7 @@ form input[type="checkbox"]:checked+label:after {
       opacity: 1;
 }
 
-button {
+.container button {
       display: inline-block;
       padding: 12px 24px;
       background-color: var(--accent);
@@ -162,13 +162,13 @@ button {
       transition: all 0.3s ease;
 }
 
-button span {
+.container button span {
       display: inline-block;
       position: relative;
       transition: transform 0.3s ease;
 }
 
-button:before {
+.container button:before {
       content: '';
       position: absolute;
       top: 0;
@@ -181,14 +181,14 @@ button:before {
       transition: transform 0.3s ease;
 }
 
-button:hover {
+.container button:hover {
       color: #ffffff;
 }
 
-button:hover span {
+.container button:hover span {
       transform: translateY(-100%);
 }
 
-button:hover:before {
+.container button:hover:before {
       transform: scaleX(1);
 }

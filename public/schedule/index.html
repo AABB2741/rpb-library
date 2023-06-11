@@ -5,11 +5,13 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
       <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
       <link rel="stylesheet" href="../common/styles/reset.css">
-      <link rel="stylesheet" href="../common/styles/root.css">
       <link rel="stylesheet" href="../schedule/styles/style.css">
-      <title>Schedules</title>
+
+      <title>Downloads programados</title>
 </head>
 
 <body>
@@ -19,10 +21,8 @@
             <div class="container-descriptions">
                   <h1 class="container-title">Dowload programados</h1>
                   <div class="book-description">
-                        <h2 class="book-title">Livro: <span>The Economist</span></h2>
-                        <p class="book-description">Global news and current afflairs from a European perpective. Best
-                              dowloades on Friday
-                              mornings (GMT)</p>
+                        <h2 class="book-title">Livro: <span>O Economista</span></h2>
+                        <p class="book-description">Notícias globais e romances atuais de uma perspectiva Europeia. Melhores downloads em sextas de manhã (GMT)</p>
                         <img src="../assets/demos/man-person-hair-white-profile-male-451653-pxhere.com.jpg"
                               alt="foto do livro">
                   </div>
@@ -30,22 +30,22 @@
             <div class="box-layout">
                   <div class="top-box">
                         <input type="checkbox" />
-                        <span>Schedyle for dowload</span>
+                        <span>Programar download</span>
                   </div>
                   <div class="middle-box">
                         <div>
                               <input type="radio" id="option1" name="options" value="option1">
-                              <label for="option1">Days of week</label>
+                              <label for="option1">Dias da semana</label>
                         </div>
 
                         <div>
                               <input type="radio" id="option2" name="options" value="option2">
-                              <label for="option2">Days of month</label>
+                              <label for="option2">Dias do mês</label>
                         </div>
 
                         <div>
                               <input type="radio" id="option3" name="options" value="option3">
-                              <label for="option2">Every x days</label>
+                              <label for="option2">A cada x dias</label>
                         </div>
                   </div>
                   <div class="bottom-box">
@@ -90,17 +90,19 @@
                         </form>
 
                         <div>
-                              <span>Dowload After</span>
+                              <span>Baixar após</span>
                               <input type="date" id="date-input" name="date">
                         </div>
 
                   </div>
                   <button>
-                        Dowload Agora
+                        Baixar agora
                   </button>
             </div>
       </div>
 
+      <script src="../common/scripts/theme/themeManager.js"></script>
+      
       <script src="../common/scripts/header/header.js"></script>
       <script src="../common/scripts/menu/menu.js"></script>
       <script src="./scripts/script.js"></script>

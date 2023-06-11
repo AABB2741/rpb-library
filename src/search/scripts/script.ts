@@ -10,8 +10,37 @@ function setResultsMode() {
     const title = document.querySelector(".search") as HTMLElement;
     title.innerText = q;
 
-    if (searchMode == "tag") {
-        banner?.classList.add("tag");
+    if (searchMode == "tag" && banner) {
+        const bannerColors = [
+            '#800000',   // Vermelho escuro
+            '#B24C00',   // Laranja escuro
+            '#CCCC00',   // Amarelo escuro
+            '#006400',   // Verde escuro
+            '#000080',   // Azul escuro
+            '#1E0064',   // Índigo escuro
+            '#4B0082',   // Violeta escuro
+            '#800080',   // Magenta escuro
+            '#8B0A50',   // Rosa escuro
+            '#CD6600',   // Laranja-avermelhado escuro
+            '#006400',   // Verde-amarelado escuro
+            '#008080',   // Ciano escuro
+            '#003535',   // Verde-azulado escuro
+            '#000040',   // Azul-marinho escuro
+            '#400040',   // Roxo escuro
+            '#800080',   // Rosa-claro (sem alteração)
+            '#C0B283',   // Amarelo-claro escuro
+            '#79C477',   // Verde-pálido escuro
+            '#8AA1B5',   // Azul-pálido escuro
+            '#B8B8D9',   // Lavanda escuro
+            '#B8860B',   // Ouro escuro
+            '#5F9EA0',   // Azul-celeste escuro
+            '#104646',   // Verde-mar escuro
+            '#9932CC',   // Orquídea escuro
+            '#8C9EB8'    // Azul-aço escuro
+        ];
+
+        banner.style.background = bannerColors[Math.round(Math.random() * (bannerColors.length - 1))];
+        banner.classList.add("tag");
     } else banner?.classList.add("search");
 }
 setResultsMode();
