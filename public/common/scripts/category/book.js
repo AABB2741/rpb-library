@@ -39,7 +39,8 @@ class Book {
         seeButton.innerText = "Ver";
         seeButton.href = "../overview/index.html?id=40"; // remover posição relativa
         bookOptions.appendChild(seeButton);
-        const add = document.createElement("button");
+        const add = document.createElement("a");
+        add.href = "../edit/index.html";
         const addIcon = document.createElement("i");
         addIcon.classList.add("ph", "ph-plus");
         add.appendChild(addIcon);

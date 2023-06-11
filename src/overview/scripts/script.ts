@@ -1,6 +1,6 @@
 const overviewHeader = new Header();
 document.querySelector(".header-container")?.appendChild(overviewHeader.get());
-const overviewMenu = new Menu("");
+const overviewMenu = new Menu("overview");
 document.querySelector(".menu-container")?.appendChild(overviewMenu.get());
 
 const overviewTabs = new TabManager("summary", [{

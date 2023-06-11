@@ -30,7 +30,7 @@
       width: 50%;
       height: 300px;
       border-radius: 20px;
-      background-color: #272727;
+      background-color: var(--bg2);
       padding: 20px;
 }
 
@@ -132,13 +132,15 @@ form input[type="checkbox"]:checked+label:before {
 form div label:after {
       content: "\2713";
       position: absolute;
-      top: 25%;
-      left: 11%;
-      transform: translate(-50%, calc(-50% + 4px));
+      top: 0;
+      left: 0;
+      width: 25px;
+      transform: translate(0, 0);
       font-size: 20px;
       color: #fff;
       opacity: 0;
       transition: all 0.3s ease;
+      text-align: center;
 }
 
 form input[type="checkbox"]:checked+label:after {
