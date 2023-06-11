@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../common/styles/reset.css">
+    <link rel="stylesheet" href="../../common/styles/root.css">
+
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/basic.css">
+    <link rel="stylesheet" href="styles/custom.css">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <title>Edit Media</title>
+
+</head>
+
+<body>
+    <div class="header-container"></div>
+    <div class="menu-container"></div>
+
+    <div class="container">
+        <div class="tab-container"></div>
+    
+        <div class="contentBasic" id="basic-metadata">
+    
+            <section class="upSide">
+                <div class="titleBook">
+                    <p>Título: </p>
+                    <p><input class="inputSideUp" type="text" name="titleBook" id="titleBook"></p>
+                    <p style="cursor: pointer;"> -> </p>
+                    <p>Ordem de título:</p>
+                    <p><input class="inputSideUp" type="text" name="titleB" id="titleB" readonly></p>
+                </div>
+                <div class="authorName">
+                    <p>Autor(es): </p>
+                    <p><input class="inputSideUp" type="text" name="author" id="author"></p>
+                    <p style="cursor: pointer;"> -> </p>
+                    <p>Ordem de autores</p>
+                    <p><input class="inputSideUp" type="text" name="authorN" id="authorN" readonly></p>
+                </div>
+                <div class="series">
+                    <p>Séries: </p>
+                    <p><input class="inputSideUp" type="text" name="series" id="series"></p>
+                    <p>Número:</p>
+                    <p><input class="inputSideUp" type="number" name="serial" id="serial"></p>
+                </div>
+                <div class="sideContent sideContentRight">
+                    <div class="newElements">
+                        <div class="smallsSquare">
+                            <div class="smallSquare">
+                                <i class="ph ph-books"></i>
+                            </div>
+                            <div class="smallSquare">
+                                <i class="ph ph-info"></i>
+                            </div>
+                        </div>
+                        <div class="largeSquare">
+                            <p>Epub (44mb)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="downPage">
+    
+                <div class="book">
+                    <img src="../../assets/demos/metadata/book.jpg" alt="" srcset="">
+                </div>
+                <div class="midBasic">
+                    <div class="elementUp">
+                        <button class="buttonsAlto">Navegar</button>
+                        <button class="buttonsAlto">Remover</button>
+                        <button class="buttonsAlto">Recortar</button>
+                        <button class="buttonsBaixo">Baixar capa</button>
+                        <button class="buttonsBaixo">Gerar capa</button>
+                    </div>
+                    <div class="elementMid">
+                        <p class="formBasicMid">Avaliação <input type="text" name="" id=""></p>
+                        <p class="formBasicMid">TAGs<input type="text" name="" id=""></p>
+                        <p class="formBasicMid">Identificadores <input type="text"></p>
+                        <p class="formBasicMid">Data <input type="date" name="" id=""></p>
+                        <p class="formBasicMid">Publicado em <input type="date" name="" id=""></p>
+                        <p class="formBasicMid">Publicado por <input type="text" name="" id=""></p>
+                    </div>
+                    <div class="elementDown">
+                        <button onclick="downnloadMedia()" class="buttonDownload">Baixar metadados</button>
+                    </div>
+                </div>
+                <div class="commentArea">
+                    <h3>Comentários</h3>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+    
+            </section>
+        </div>
+    
+        <div class="contentCustom" id="custom-metadata">
+    
+        </div>
+    </div>
+
+    <script src="../../common/scripts/header/header.js"></script>
+    <script src="../../common/scripts/menu/menu.js"></script>
+    <script src="../../common/scripts/tab/tabManager.js"></script>
+    <script src="../../common/scripts/tab/tab.js"></script>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>

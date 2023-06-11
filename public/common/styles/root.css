@@ -1,5 +1,5 @@
 /* Light */
-/* :root {
+:root {
     --bg: #eeeeee;
     --bg2: #fff;
     --bg3: #ebebeb;
@@ -12,9 +12,9 @@
     --accent: #0081ff;
     --accent2: #00b652;
     --check: #00b652;
-} */
+}
 
-:root {
+/* :root {
     --bg: #1a1a1a;
     --bg2: #121212;
     --bg3: #272727;
@@ -27,4 +27,4 @@
     --accent: #0081ff;
     --accent2: #00b652;
     --check: #00e266;
-}
+} */

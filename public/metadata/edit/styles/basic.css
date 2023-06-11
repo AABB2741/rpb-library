@@ -1,0 +1,277 @@
+.contentBasic {
+    width: 100%;
+    height: 749px;
+    background-color: var(--bg);
+}
+
+.upSide {
+    display: flex;
+    flex-direction: column;
+    /* Altera o layout para uma disposição vertical */
+    align-items: flex-start;
+    /* Alinha os elementos à esquerda */
+    padding: 30px;
+    /* Espaço lateral direito */
+}
+
+.titleBook,
+.authorName,
+.series {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.titleBook p,
+.authorName p,
+.series p {
+    margin: 0 20px;
+}
+
+.titleBook input,
+.authorName input,
+.series input {
+    margin-bottom: 10px;
+}
+
+.titleBook,
+.authorName {
+    flex-grow: 1;
+    /* Permite que as divs ocupem todo o espaço disponível */
+}
+
+.inputSideUp {
+    width: 300px;
+    height: 25px;
+    border: 1px;
+    border-radius: 10px;
+}
+
+.sideContent {
+    display: flex;
+    align-items: center;
+}
+
+.sideContentRight {
+    margin-left: auto;
+    margin-top: -130px;
+}
+
+.newElements {
+    display: flex;
+    align-items: center;
+}
+
+.smallsSquare {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: -9px;
+}
+
+.smallSquare {
+    width: 60px;
+    height: 50px;
+    /*background-color: red;*/
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.smallSquare:hover {
+    filter: opacity(0.5);
+}
+
+/*.smallSquare:hover {
+    background-color: #45a049;
+}
+
+.smallSquare:active {
+    background-color: #3e8e41;
+}*/
+
+.largeSquare {
+    width: 120px;
+    height: 120px;
+    background-color: var(--bg2);
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.largeSquare p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.downPage {
+    display: flex;
+    align-items: flex-start;
+}
+
+.book {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.book img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.book,
+.midBasic,
+.commentArea {
+    flex-grow: 1;
+    width: 450px;
+    height: 550px;
+    /*background-color: #fffaeb;*/
+    margin: 10px;
+}
+
+.midBasic {
+    flex: 1 1 auto;
+    margin-right: 20px;
+}
+
+.commentArea textarea {
+    flex: 1;
+    background: var(--bg2);
+    width: 100%;
+    resize: vertical;
+    border: 0;
+    border-radius: 16px;
+    min-height: 150px;
+}
+
+.buttonsAlto {
+    width: 100px;
+    margin-left: 8%;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color: #007BFF;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.buttonsAlto:hover {
+    background-color: #778899;
+}
+
+.buttonsAlto:active {
+    background-color: #66b3ff;
+}
+
+.buttonsBaixo {
+    width: 170px;
+    margin-left: 8%;
+    margin-top: 8%;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color: #007BFF;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.buttonsBaixo:hover {
+    background-color: #778899;
+}
+
+.buttonsBaixo:active {
+    background-color: #66b3ff;
+}
+
+.elementUp .buttonsAlto {
+    order: -1;
+}
+
+.commentArea {
+    flex: 0 0 auto;
+}
+
+.buttonDownload {
+    width: 350px;
+    margin-left: 8%;
+    margin-top: 8%;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color: #007BFF;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonDownload:hover {
+    background-color: #778899;
+}
+
+.buttonsAlto:active {
+    background-color: #66b3ff;
+}
+
+.midBasic {
+    display: flex;
+    flex-direction: column;
+}
+
+.elementMid input {
+    width: 300px;
+    height: 25px;
+    border: 1px;
+    border-radius: 10px;
+}
+
+.elementUp,
+.elementMid,
+.elementDown {
+    margin-bottom: 10px;
+}
+
+.elementMid {
+    display: flex;
+    flex-direction: column;
+}
+
+.formBasicMid {
+    display: contents;
+}
+
+.elementMid input {
+    display: flex;
+    width: 99%;
+    margin-top: 20px;
+}

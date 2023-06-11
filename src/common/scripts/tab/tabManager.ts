@@ -1,10 +1,31 @@
+const DefaultTabManagerOptions = {
+    baseUrl: "../",
+    autoImport: true
+}
+
+type TabManagerOptions = typeof DefaultTabManagerOptions;
+
 class TabManager {
+    options: TabManagerOptions;
+
     container: HTMLElement;
     content: HTMLUListElement;
     currentTab: string;
     tabs: Tab[];
 
-    public constructor(currentTab: string, tabs: Tab[]) {
+    public constructor(currentTab: string, tabs: Tab[], options?: Partial<TabManagerOptions>) {
+        this.options = { ...DefaultTabManagerOptions, ...options };
+
+        this.options.baseUrl = this.options.baseUrl?.endsWith("/") ? this.options.baseUrl.substring(0, this.options.baseUrl.length - 1) : this.options.baseUrl;
+
+        if (this.options?.autoImport) {
+            const head = document.getElementsByTagName("head")[0];
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = `${this.options.baseUrl}/common/styles/tab/tab.css`;
+            head.appendChild(link);
+        }
+
         this.currentTab = currentTab;
         this.tabs = tabs;
 

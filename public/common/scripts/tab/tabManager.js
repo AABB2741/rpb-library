@@ -1,6 +1,20 @@
 "use strict";
+const DefaultTabManagerOptions = {
+    baseUrl: "../",
+    autoImport: true
+};
 class TabManager {
-    constructor(currentTab, tabs) {
+    constructor(currentTab, tabs, options) {
+        var _a, _b;
+        this.options = Object.assign(Object.assign({}, DefaultTabManagerOptions), options);
+        this.options.baseUrl = ((_a = this.options.baseUrl) === null || _a === void 0 ? void 0 : _a.endsWith("/")) ? this.options.baseUrl.substring(0, this.options.baseUrl.length - 1) : this.options.baseUrl;
+        if ((_b = this.options) === null || _b === void 0 ? void 0 : _b.autoImport) {
+            const head = document.getElementsByTagName("head")[0];
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = `${this.options.baseUrl}/common/styles/tab/tab.css`;
+            head.appendChild(link);
+        }
         this.currentTab = currentTab;
         this.tabs = tabs;
         const nav = document.createElement("nav");

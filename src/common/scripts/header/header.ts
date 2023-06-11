@@ -1,12 +1,30 @@
+const HeaderParams = new URLSearchParams(window.location.search);
+
+const DefaultHeaderOptions = {
+    baseUrl: "../",
+    autoImport: true,
+    q: (HeaderParams.get("mode") == "tag" ? `#${HeaderParams.get("q")}` : HeaderParams.get("q")) ?? ""
+}
+
+type HeaderOptions = Partial<typeof DefaultHeaderOptions>;
+
 class Header {
-    get(autoImport = "../common/styles/header/header.css") {
-        if (autoImport) {
+    options: HeaderOptions;
+
+    constructor(options?: HeaderOptions) {
+        this.options = { ...DefaultHeaderOptions, ...options };
+
+        this.options.baseUrl = this.options.baseUrl?.endsWith("/") ? this.options.baseUrl.substring(0, this.options.baseUrl.length - 1) : this.options.baseUrl;
+
+        if (this.options?.autoImport) {
             const head = document.getElementsByTagName("head")[0];
             const link = document.createElement("link");
             link.rel = "stylesheet";
-            link.href = autoImport;
+            link.href = `${this.options.baseUrl}/common/styles/header/header.css`;
             head.appendChild(link);
         }
+    }
+    get() {
 
         const header = document.createElement("Header");
         header.id = "header";
@@ -15,7 +33,7 @@ class Header {
         const logoContainer = document.createElement("div");
         logoContainer.classList.add("header-logo-container");
         const img = document.createElement("img");
-        img.src = "../assets/logo.png";
+        img.src = `${this.options.baseUrl}/assets/logo.png`;
         img.alt = "RPB Library";
         logoContainer.appendChild(img);
         header.appendChild(logoContainer);
@@ -28,6 +46,7 @@ class Header {
         headerInput.name = "search";
         headerInput.id = "headerSearch"
         headerInput.placeholder = "Procure por livros, autores, séries...";
+        headerInput.value = this.options.q ?? "";
         headerSearch.appendChild(headerInput);
         header.appendChild(headerSearch);
 
@@ -41,7 +60,7 @@ class Header {
         const headerUser = document.createElement("div");
         headerUser.classList.add("header-user");
         const avatar = document.createElement("img");
-        avatar.src = "../assets/demos/avatar.jpg";
+        avatar.src = `${this.options.baseUrl}/assets/demos/avatar.jpg`;
         headerUser.appendChild(avatar);
         const headerUsername = document.createElement("p");
         headerUsername.classList.add("header-user-name");
@@ -58,6 +77,8 @@ class Header {
         if (!q)
             return;
 
-        window.location.href = `../search/index.html?q=${encodeURI(q)}`;  // remover posição relativa
+        if (q.startsWith("#")) {
+            window.location.href = `${this.options.baseUrl}/search/index.html?q=${encodeURI(q.replace(/#/g, ""))}&mode=tag`;
+        } else window.location.href = `${this.options.baseUrl}/search/index.html?q=${encodeURI(q)}`;  // remover index.html
     }
 }

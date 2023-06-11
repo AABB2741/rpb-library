@@ -1,6 +1,10 @@
 "use strict";
+const DefaultMenuOptions = {
+    baseUrl: "../",
+    autoImport: true
+};
 class Menu {
-    constructor(currentScreen, autoImport = "../common/styles/menu/menu.css", tabs, options) {
+    constructor(currentScreen, options) {
         this.tabs = [{
                 label: "Descobrir",
                 code: "discover",
@@ -14,7 +18,7 @@ class Menu {
                 code: "convert",
                 icon: "arrows-clockwise"
             }];
-        this.options = [{
+        this.menuOptions = [{
                 label: "Meu perfil",
                 code: "profile",
                 icon: "user-circle"
@@ -31,15 +35,16 @@ class Menu {
                 code: "settings",
                 icon: "gear-six"
             }];
-        if (autoImport) {
+        this.options = Object.assign(Object.assign({}, DefaultMenuOptions), options);
+        this.options.baseUrl = this.options.baseUrl.endsWith("/") ? this.options.baseUrl.substring(0, this.options.baseUrl.length - 1) : this.options.baseUrl;
+        if (this.options.autoImport) {
             const head = document.getElementsByTagName("head")[0];
             const link = document.createElement("link");
             link.rel = "stylesheet";
-            link.href = autoImport;
+            link.href = `${this.options.baseUrl}/common/styles/menu/menu.css`;
             head.appendChild(link);
         }
         this.currentScreen = currentScreen;
-        this.tabs = tabs !== null && tabs !== void 0 ? tabs : this.tabs;
     }
     get() {
         const menu = document.createElement("aside");
@@ -52,14 +57,14 @@ class Menu {
         // Opções
         const menuOptions = document.createElement("div");
         menuOptions.classList.add("menu-options");
-        this.addOptions(menuOptions, this.options);
+        this.addOptions(menuOptions, this.menuOptions);
         menu.appendChild(menuOptions);
         return menu;
     }
     addOptions(container, options) {
         for (let o of options) {
             const a = document.createElement("a");
-            a.href = `../${o.code}/index.html`; // remover posição relativa
+            a.href = `${this.options.baseUrl}/${o.code}/index.html`; // remover posição relativa
             a.title = o.label;
             if (this.currentScreen == o.code)
                 a.classList.add("selected");
